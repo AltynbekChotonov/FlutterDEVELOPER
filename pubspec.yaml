@@ -27,7 +27,7 @@ flutter:
   uses-material-design: true
 
   assets:
-      - assets/images/moifoto.jpg
+      - assets/images/
   #   - images/a_dot_ham.jpeg
 
   
