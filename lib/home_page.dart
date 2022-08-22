@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'LoginPage.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -57,6 +59,16 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Image.asset('assets/images/iamrich.png'),
+            const SizedBox(height: 80),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginPage()),
+                );
+              },
+              child: Text('Чыгуу'),
+            ),
           ],
         ),
       ),

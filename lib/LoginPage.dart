@@ -179,10 +179,46 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 onPressed: isActive
                     ? () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
-                        );
+                        if (_phone == '+926 127 27 90' &&
+                            _email == 'altynbekkg@gmail.com') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        } else if (_phone != '+926 127 27 90' &&
+                            _email != 'altynbekkg@gmail.com') {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                "Сиздин телефон номериниз жана Электрондук почтаныз туура эмес!Сураныч кайрадан жазыныз",
+                              ),
+                            ),
+                          );
+                        } else if (_phone != '+926 127 27 90') {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                "Сиздин телефон номериниз туура эмес!Сураныч кайрадан жазыныз",
+                              ),
+                            ),
+                          );
+                        } else if (_email != 'altynbekkg@gmail.com') {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                "Сиздин Электрондук почтаныз туура эмес!Сураныч кайрадан жазыныз",
+                              ),
+                            ),
+                          );
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                "Сиздин телефон номериниз жана Электрондук почтаныз туура эмес!Сураныч кайрадан жазыныз",
+                              ),
+                            ),
+                          );
+                        }
                       }
                     : null,
                 child: const Text(
