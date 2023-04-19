@@ -214,7 +214,7 @@ class _LoginPageState extends State<LoginPage> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
                               content: Text(
-                                "Сиздин Электрондук почтаныз туура эмес!Сураныч кайрадан жазыныз",
+                                "Сиздин телефон номериниз жана Электрондук почтаныз туура эмес!Сураныч кайрадан жазыныз",
                               ),
                             ),
                           );
